@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    
+    <title>Full Screen Video with Menu and Centered Text</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Wideo w tle */
+        }
+
+        .navigation {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1; /* Menu nad wideo */
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            z-index: 1; /* Tekst nad wideo */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="12613683_3840_2160_30fps.mp4" type="video/mp4">
+           
+        </video>
+        <nav class="navigation">
+            
+            <a href="#">inforrmacje</a>
+            <a href="#">Kontakt</a>
+        </nav>
+        <div class="centered-text">Sebastian Słodowy 4C</div>
+    </div>
+</body>
+</html>
